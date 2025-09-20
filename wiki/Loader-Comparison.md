@@ -1,4 +1,4 @@
-<!-- Revision: 1.2 -->
+<!-- Revision: 1.1 -->
 # 🔧 Loader Comparison
 
 This page explains the differences between the three RLM loader versions and helps you choose the right one for your needs.
