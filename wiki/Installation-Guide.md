@@ -1,4 +1,4 @@
-<!-- Revision: 1.2 -->
+<!-- Revision: 1.1 -->
 # Installation Guide
 
 Welcome to the Realism Location Marker (RLM) installation guide! This comprehensive guide will walk you through installing RLM on all major browsers.
