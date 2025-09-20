@@ -95,4 +95,4 @@ If you're unsure about your feature request or need help formulating it:
 **Remember:** Every great feature starts with a great idea! We value your input and look forward to hearing your suggestions.
 
 *Last updated: January 2025*  
-*Revision: 1.1*
+*Revision: 1.0*
