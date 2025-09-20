@@ -1,20 +1,8 @@
 # RLM Changelog
 
-**Revision**: 1.3
+**Revision**: 1.2
 
 This document tracks all changes, updates, and improvements made to the Realism Location Marker (RLM) project.
-
----
-
-## Version 7.0.2
-**Release Date**: January 2025
-
-### 🚀 Major Version Update
-- **V7.0.2 Release**: Updated all loaders and web interface to version 7.0.2
-- **New Stable Loader**: Added dedicated stable loader for V7 modular system
-- **Enhanced Documentation**: Updated all documentation to reflect V7 features
-- **Web Interface Updates**: Updated all web interface components to V7.0.2
-- **Revision Updates**: Incremented all documentation revisions by 1
 
 ---
 
