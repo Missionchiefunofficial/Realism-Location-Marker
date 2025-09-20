@@ -1,7 +1,7 @@
-<!-- Revision: 1.4 -->
-# Realism Location Marker (RLM) V7
+<!-- Revision: 1.3 -->
+# Realism Location Marker (RLM) V6
 
-Welcome to the **Realism Location Marker (RLM) V7** - A comprehensive Tampermonkey script that enhances your MissionChief gaming experience by showing real-world building locations and POIs.
+Welcome to the **Realism Location Marker (RLM) V6** - A comprehensive Tampermonkey script that enhances your MissionChief gaming experience by showing real-world building locations and POIs.
 
 ## 🎯 What is RLM?
 
