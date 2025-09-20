@@ -179,4 +179,4 @@ Your feedback shapes our roadmap! We regularly review:
 **Note**: This roadmap is subject to change based on community feedback, technical requirements, and development priorities. We strive to keep it as accurate and up-to-date as possible.
 
 *Last updated: January 2025*  
-*Revision: 1.3*
+*Revision: 1.2*
