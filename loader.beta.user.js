@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Realism Location Marker (BETA)
-// @namespace    https://missionchief-unofficial.com
-// @version      7.1.2-beta
-// @description  Beta version of RLM with multi-language support and server-specific building IDs
+// @namespace    https://realism-location-marker.com
+// @version      7.3.0-beta
+// @description  Beta version of RLM V7.3.0 with multi-language support and server-specific building IDs
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // @copyright    Copyright (C) 2025 Norbit.Online
-// @icon         https://rlm.missionchief-unofficial.com/static/assets/images/RLM-Marker.png
+// @icon         https://realism-location-marker.com/static/assets/images/RLM-Marker.png
 // @match        https://www.missionchief.com/*
 // @match        https://police.missionchief.com/*
 // @match        https://www.missionchief.co.uk/*
@@ -234,7 +234,7 @@
 
     // Configuration
     const config = {
-        apiBaseUrl: 'https://rlm.missionchief-unofficial.com',
+        apiBaseUrl: 'https://realism-location-marker.com',
         apiEndpoints: {
             pois: '/api/pois',
             reverseGeocode: '/api/reverse-geocode',
@@ -243,7 +243,7 @@
             buildingTypes: '/api/building-types',
             dispatchCenters: '/api/dispatch-centers'
         },
-        version: '7.0.2-beta',
+        version: '7.3.0-beta',
         status: 'Beta Testing'
     };
 
@@ -317,7 +317,7 @@
         
         GM_xmlhttpRequest({
             method: 'GET',
-            url: `https://rlm.missionchief-unofficial.com/api/beta-entry-point?_t=${timestamp}`,
+            url: `https://realism-location-marker.com/api/beta-entry-point?_t=${timestamp}`,
             headers: headers,
             onload: function(response) {
                 try {
