@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Realism Location Marker
-// @namespace    https://missionchief-unofficial.com
-// @version      6.4.1
-// @description  RLM with multi-language support and server-specific building IDs
+// @namespace    https://realism-location-marker.com
+// @version      6.5.0
+// @description  RLM with multi-language support and server-specific building IDs — updates to V7 Stable
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // @copyright    Copyright (C) 2025 Norbit.Online
-// @icon         https://rlm.missionchief-unofficial.com/static/assets/images/RLM-Marker.png
+// @icon         https://realism-location-marker.com/static/assets/images/RLM-Marker.png
 // @match        https://www.missionchief.com/*
 // @match        https://www.missionchief.co.uk/*
 // @match        https://www.missionchief.com.au/*
@@ -31,8 +31,8 @@
 // @match        https://www.operador112.com/*
 // @match        https://www.operateur112.be/*
 // @match        https://www.dispecerske-centrum.com/*
-// @downloadURL  https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.user.js
-// @updateURL    https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.user.js
+// @downloadURL  https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.stable.user.js
+// @updateURL    https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.stable.user.js
 // @grant        GM_xmlhttpRequest
 // @grant        GM_info
 // @run-at       document-start
@@ -220,7 +220,7 @@
 
     // Configuration
     const config = {
-        apiBaseUrl: 'https://rlm.missionchief-unofficial.com',
+        apiBaseUrl: 'https://realism-location-marker.com',
         apiEndpoints: {
             pois: '/api/pois',
             reverseGeocode: '/api/reverse-geocode',
@@ -229,12 +229,12 @@
             buildingTypes: '/api/building-types',
             dispatchCenters: '/api/dispatch-centers'
         },
-        version: '6.4.1',
+        version: '6.5.0',
         status: 'Production'
     };
 
     function loadServerScript() {
-        console.log('RLM Loader: Loading server script...');
+        console.log('RLM legacy main loader → Stable entry point...');
         
         // Get game configuration
         const gameConfig = getGameConfig();
@@ -252,11 +252,11 @@
         
         console.log('RLM Loader: Full config:', window.RLMConfig);
 
-        // Load the server script with cache busting
+        // Load V7 Stable entry (legacy /api/script/main retired)
         const timestamp = Date.now();
         GM_xmlhttpRequest({
             method: 'GET',
-            url: `https://rlm.missionchief-unofficial.com/api/script/main?_t=${timestamp}`,
+            url: `https://realism-location-marker.com/api/stable-entry-point?_t=${timestamp}`,
             onload: function(response) {
                 try {
                     console.log('RLM Loader: Server script loaded, length:', response.responseText.length);
