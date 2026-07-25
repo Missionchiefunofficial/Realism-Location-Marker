@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name         Realism Location Marker V7.0.0 [DEV]
-// @namespace    https://missionchief-unofficial.com
-// @version      7.1.2-dev
-// @description  RLM V7.0.0 DEV with modular dropdown system and multi-language support
+// @name         Realism Location Marker [DEV]
+// @namespace    https://realism-location-marker.com
+// @version      7.3.0-dev
+// @description  RLM V7.3.0 DEV with modular dropdown system and multi-language support
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // @copyright    Copyright (C) 2025 Norbit.Online
-// @icon         https://rlm.missionchief-unofficial.com/static/assets/images/RLM-Marker.png
+// @icon         https://realism-location-marker.com/static/assets/images/RLM-Marker.png
 // @match        https://www.missionchief.com/*
 // @match        https://police.missionchief.com/*
 // @match        https://www.missionchief.co.uk/*
@@ -120,7 +120,7 @@
 
     // Configuration
     const config = {
-        apiBaseUrl: 'https://rlm.missionchief-unofficial.com',
+        apiBaseUrl: 'https://realism-location-marker.com',
         apiEndpoints: {
             pois: '/api/pois',
             reverseGeocode: '/api/reverse-geocode',
@@ -129,7 +129,7 @@
             buildingTypes: '/api/building-types',
             dispatchCenters: '/api/dispatch-centers'
         },
-        version: '7.0.2-dev',
+        version: '7.3.0-dev',
         status: 'Dev Testing'
     };
 
@@ -198,12 +198,16 @@
     function loadDefaultScript() {
         const timestamp = Date.now();
         
-        // Get common headers for RLM tracking
-        const headers = getCommonHeaders();
+        // Get common headers for RLM tracking + security headers
+        const headers = {
+            ...getCommonHeaders(),
+            'X-RLM-Timestamp': timestamp,
+            'X-RLM-Origin': window.location.origin
+        };
         
         GM_xmlhttpRequest({
             method: 'GET',
-            url: `https://rlm.missionchief-unofficial.com/api/dev-entry-point?_t=${timestamp}`,
+            url: `https://realism-location-marker.com/api/dev-entry-point?_t=${timestamp}`,
             headers: headers,
             onload: function(response) {
                 try {
